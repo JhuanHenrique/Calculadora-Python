@@ -64,7 +64,6 @@ def calculadora(a, b, operador=None, c=None, d=None):
     else:
         return 'Erro: Operador inválido.'
 
-
 if operador is None:
     print("Erro: Opção inválida.")
 else:
@@ -73,12 +72,13 @@ else:
     
     if operador == 'delta':
         c = input('Digite o coeficiente C: ')
-        resultado = calculadora(a, b, operador, c)
+        resultado = calculadora(a, b, 'delta', c)
     elif operador == 'equacao algebrica':
         c = input('Digite o terceiro numero: ')
-        d = input('Digite o querto numero: ')
-        resultado = calculadora(a, b, operador, c, d)
+        d = input('Digite o quarto numero: ')
+        resultado = calculadora(a, b, 'equacao algebrica', c, d)
     else:
         resultado = calculadora(a, b, operador)
     
     print(f'Resultado: {resultado}')
+llll
